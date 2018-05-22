@@ -24,7 +24,13 @@ namespace MinimalClient
             //"1 - Create a config"
             _config = CreateOpcUaAppConfiguration();
         }
-        
+
+        /// <summary>
+        /// 서버가 시작되지 않았을때 에러 발생
+        /// Opc.Ua.ServiceResultException: 'Error establishing a connection.'
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ConnectButton_Click(object sender, EventArgs e)
         {
             string endPointUrl = this.EndpointCB.Text;
